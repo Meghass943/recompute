@@ -1,0 +1,8 @@
+trigger: none
+pr: none
+
+jobs:
+  steps:
+    bash: |
+      echo "hello Meghana"
+    displayname: Greetings
