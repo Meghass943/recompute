@@ -1,8 +1,18 @@
-trigger: none
+trigger: 
+- main
 pr: none
 
-jobs:
-  steps:
-    bash: |
+pool: 
+  vmImage: 'ubuntu-latest'
+steps:
+  - bash: |
       echo "hello Meghana"
-    displayname: Greetings
+    displayName: 'Greetings'
+
+  - task: Bash@3
+    inputs:
+      targetType: 'inline'
+      script: |
+        # Write your commands here
+        
+        echo 'this is coming from a plugin'
